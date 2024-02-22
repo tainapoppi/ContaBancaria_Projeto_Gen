@@ -114,6 +114,22 @@ public class Menu {
 	System.out.println("Banco T.Poppi - tainapoppi@hotmail.com");
 	System.out.println("https://github.com/tainapoppi/ContaBancaria_Projeto_Gen");
 	System.out.println("*********************************************************");
-   }
+   
+    }
 
+    public static void keyPress() {
+
+		try {
+
+			System.out.println(Cores.TEXT_RESET + "\n\nPressione Enter para Continuar...");
+			System.in.read();
+
+		} catch (IOException e) {
+
+			System.out.println("Você pressionou uma tecla diferente de enter!");
+
+}
+		
+    }
+    
 }
