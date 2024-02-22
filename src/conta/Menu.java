@@ -5,7 +5,6 @@ import java.util.InputMismatchException;
 
 import java.util.Scanner;
 
-import conta.model.Conta;
 import conta.model.ContaCorrente;
 import conta.model.ContaPoupanca;
 
@@ -68,6 +67,22 @@ public class Menu {
 				System.exit(0);
 			}
 
+			try {
+				opcao = leia.nextInt();
+				
+			}catch(InputMismatchException e){
+				System.out.println("\nDigite valores inteiros!");
+				leia.nextLine();
+				opcao=0;
+			}
+
+			if (opcao == 9) {
+				System.out.println("\nBanco do Brazil com Z - O seu futuro começa aqui!");
+				sobre();
+                 		leia.close();
+				System.exit(0);
+				
+			}
 			switch (opcao) {
 			case 1:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Criar Conta\n\n");
