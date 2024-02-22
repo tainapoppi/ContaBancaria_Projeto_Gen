@@ -1,5 +1,8 @@
 package conta;
 
+import java.io.IOException;
+import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
 import conta.model.Conta;
@@ -11,12 +14,8 @@ import conta.util.Cores;
 public class Menu {
 
 	public static void main(String[] args) {
-		Conta c1 = new Conta(1, 123, 1, "Aurora", 10000.0f);
-		c1.visualizar();
-		c1.sacar(12000.0f);
-		c1.visualizar();
-		c1.depositar(5000.0f);
-		c1.visualizar();
+		
+		int opcao = 0;
 		
 		ContaCorrente cc1 = new ContaCorrente(1, 123, 1, "Afrodite", 0.0f, 1000.0f);
 		cc1.visualizar();
@@ -34,14 +33,15 @@ public class Menu {
 
 		Scanner leia = new Scanner(System.in);
 
-		int opcao;
 
 		while (true) {
 
 			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND
 					+ "*****************************************************");
 			System.out.println("                                                     ");
-			System.out.println("                BANCO DO BRAZIL COM Z                ");
+			System.out.println("              BANCO DO BRAZIL POPPI         "
+					+ ""
+					+ "         ");
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("                                                     ");
